@@ -22,4 +22,4 @@ jobs:
     steps:
       - name: Send Discord Webhook
         run: |
-          curl -H "Content-Type: application/json" -X POST -d '{"content": "New Ocean voyage registrations are open for 15 mins"}' https://discord.com/api/webhooks/1335406663196348487/vyRi2nfIzwT-L5OLZX4ei-fumTf-aHYC-4ECWaf7L4E9WrS3cOhdbrlh7CBQswdIkjqs
+          curl -H "Content-Type: application/json" -X POST -d '{"content": "New Ocean voyage registrations open in 15 mins"}' https://discord.com/api/webhooks/1335406663196348487/vyRi2nfIzwT-L5OLZX4ei-fumTf-aHYC-4ECWaf7L4E9WrS3cOhdbrlh7CBQswdIkjqs
