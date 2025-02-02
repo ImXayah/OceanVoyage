@@ -1,0 +1,25 @@
+name: Ocean Voyage Webhook Scheduler
+
+on:
+  schedule:
+    - cron: '45 23 * * *'  # 11:45 PM UTC (15 min before 12 AM)
+    - cron: '45 1 * * *'   # 1:45 AM UTC (15 min before 2 AM)
+    - cron: '45 3 * * *'   # 3:45 AM UTC (15 min before 4 AM)
+    - cron: '45 5 * * *'   # 5:45 AM UTC (15 min before 6 AM)
+    - cron: '45 7 * * *'   # 7:45 AM UTC (15 min before 8 AM)
+    - cron: '45 9 * * *'   # 9:45 AM UTC (15 min before 10 AM)
+    - cron: '45 11 * * *'  # 11:45 AM UTC (15 min before 12 PM)
+    - cron: '45 13 * * *'  # 1:45 PM UTC (15 min before 2 PM)
+    - cron: '45 15 * * *'  # 3:45 PM UTC (15 min before 4 PM)
+    - cron: '45 17 * * *'  # 5:45 PM UTC (15 min before 6 PM)
+    - cron: '45 19 * * *'  # 7:45 PM UTC (15 min before 8 PM)
+    - cron: '45 21 * * *'  # 9:45 PM UTC (15 min before 10 PM)
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  send_webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord Webhook
+        run: |
+          curl -H "Content-Type: application/json" -X POST -d '{"content": "New Ocean voyage registrations are open for 15 mins"}' https://discord.com/api/webhooks/https://discord.com/api/webhooks/1335406663196348487/vyRi2nfIzwT-L5OLZX4ei-fumTf-aHYC-4ECWaf7L4E9WrS3cOhdbrlh7CBQswdIkjqs
